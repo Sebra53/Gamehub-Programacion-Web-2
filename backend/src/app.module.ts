@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ENTIDADES } from './database/entities';
 import { TorneosModule } from './torneos/torneos.module';
+import {EquiposModule} from './equipos/equipos.module';
 import { AuthModule } from './auth/auth.module'; 
  
 
@@ -22,6 +23,7 @@ import { AuthModule } from './auth/auth.module';
     }),
     AuthModule,
     TorneosModule,
+    EquiposModule,
   ],
 })
 export class AppModule {}
