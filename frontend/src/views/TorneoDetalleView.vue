@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { api } from '../services/api'
+import InscripcionesPanel from '../components/InscripcionesPanel.vue'
 import { usePeticion } from '../composables/usePeticion'
 import EstadoPeticion from '../components/EstadoPeticion.vue'
 const route = useRoute(), torneo = ref(null), mostrar = ref(true)
@@ -20,6 +21,7 @@ onMounted(cargar)
     <div v-show="mostrar">
       <p>Inicio: {{ new Date(torneo.fechaInicio).toLocaleString() }}</p>
       <p>Cierre: {{ new Date(torneo.cierreInscripcion).toLocaleString() }}</p>
+      <InscripcionesPanel :torneo-id="torneo.id" />
       <p>Cupo máximo: {{ torneo.cupoMaximo }}</p>
     </div>
   </article>
