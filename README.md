@@ -16,5 +16,6 @@ Vue 3 y Vite, Vue Router, NestJS, TypeORM, MySQL.
 - dudas
 - organizacion del proyecto
 - revision conflictos
-
 - nombre commit
+
+- //si ves este mensaje commit y merge salio bien
