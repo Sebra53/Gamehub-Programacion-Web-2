@@ -1,0 +1,17 @@
+:root { font-family: Arial, sans-serif; color: #182638; background: #f3f6fa; }
+body { margin: 0; }
+header { background: white; padding: 1rem; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+main { max-width: 1050px; margin: 2rem auto; padding: 0 1rem; }
+form { display: grid; gap: .8rem; max-width: 620px; margin: 1rem 0; }
+label { display: grid; gap: .3rem; }
+input, select, button { font: inherit; padding: .6rem; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .6; }
+article { background: white; padding: 1rem; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; background: white; }
+td, th { padding: .7rem; border-bottom: 1px solid #d7dfeb; text-align: left; }
+[role="alert"] { color: #a11628; }
+[role="status"] { color: #175a40; }
+a { color: #1557a0; }
+.tabla { overflow-x: auto; }
