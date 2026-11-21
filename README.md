@@ -1,3 +1,6 @@
+- //si ves este mensaje commit y merge salio bien
+- //mensaje 2 borrar al final este y todos
+
 # GameHub IPVG
 Plataforma de torneos de videojuegos.
  
@@ -18,4 +21,3 @@ Vue 3 y Vite, Vue Router, NestJS, TypeORM, MySQL.
 - revision conflictos
 - nombre commit
 
-- //si ves este mensaje commit y merge salio bien
