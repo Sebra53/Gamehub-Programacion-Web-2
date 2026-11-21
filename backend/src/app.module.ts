@@ -2,8 +2,10 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ENTIDADES } from './database/entities';
+import { TorneosModule } from './torneos/torneos.module';
 import { AuthModule } from './auth/auth.module'; 
  
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -19,6 +21,7 @@ import { AuthModule } from './auth/auth.module';
       synchronize: true,
     }),
     AuthModule,
+    TorneosModule,
   ],
 })
 export class AppModule {}
