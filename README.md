@@ -17,3 +17,4 @@ Vue 3 y Vite, Vue Router, NestJS, TypeORM, MySQL.
 - organizacion del proyecto
 - revision conflictos
 
+- nombre commit
