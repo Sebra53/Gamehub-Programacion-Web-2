@@ -2,8 +2,14 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ENTIDADES } from './database/entities';
+import { TorneosModule } from './torneos/torneos.module';
+import { PartidosModule } from './partidos/partidos.module';
+import { ResultadosModule } from './resultados/resultados.module';
+import { InscripcionesModule } from './inscripciones/inscripciones.module';
+import { EquiposModule} from './equipos/equipos.module';
 import { AuthModule } from './auth/auth.module'; 
  
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -19,6 +25,11 @@ import { AuthModule } from './auth/auth.module';
       synchronize: true,
     }),
     AuthModule,
+    TorneosModule,
+    EquiposModule,
+    InscripcionesModule,
+    ResultadosModule,
+    PartidosModule,
   ],
 })
 export class AppModule {}
