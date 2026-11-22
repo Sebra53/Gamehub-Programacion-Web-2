@@ -7,12 +7,16 @@ import EquipoDetalleView from '../views/EquipoDetalleView.vue'
 import TorneosView from '../views/TorneosView.vue'
 import TorneoFormView from '../views/TorneoFormView.vue'
 import TorneoDetalleView from '../views/TorneoDetalleView.vue'
+import PartidosView from '../views/PartidosView.vue'
+import PartidoDetalleView from '../views/PartidoDetalleView.vue'
 
 import { api, token, usuario } from '../services/api'
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', component: InicioView },
+    { path: '/partidos', component: PartidosView, meta: { privada: true } },
+    { path: '/partidos/:id', component: PartidoDetalleView, meta: { privada: true } },
     { path: '/login', component: AccesoView },
     { path: '/registro', component: AccesoView, props: { registro: true } },
     { path: '/perfil', component: PerfilView, meta: { privada: true } },
