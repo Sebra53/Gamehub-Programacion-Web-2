@@ -5,6 +5,7 @@ import { api } from '../services/api'
 import InscripcionesPanel from '../components/InscripcionesPanel.vue'
 import { usePeticion } from '../composables/usePeticion'
 import EstadoPeticion from '../components/EstadoPeticion.vue'
+import RankingTabla from '../components/RankingTabla.vue'
 const route = useRoute(), torneo = ref(null), mostrar = ref(true)
 const { cargando, error, exito, ejecutar } = usePeticion()
 function cargar() {
@@ -22,6 +23,7 @@ onMounted(cargar)
       <p>Inicio: {{ new Date(torneo.fechaInicio).toLocaleString() }}</p>
       <p>Cierre: {{ new Date(torneo.cierreInscripcion).toLocaleString() }}</p>
       <InscripcionesPanel :torneo-id="torneo.id" />
+      <RankingTabla :torneo-id="torneo.id" />
       <p>Cupo máximo: {{ torneo.cupoMaximo }}</p>
     </div>
   </article>
