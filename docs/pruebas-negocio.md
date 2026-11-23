@@ -52,9 +52,9 @@ La carga automática de datos fue exitosa.
 Las verificaciones de integridad de MySQL
 se completaron correctamente.
 
-Las 11 pruebas manuales B01-B11 quedan
-pendientes de ejecución en Swagger.
-
+Las 11 pruebas manuales B01-B11 fueron
+ejecutadas y aprobadas utilizando Swagger,
+Vue y PowerShell.
 
 ## Resultado final
 

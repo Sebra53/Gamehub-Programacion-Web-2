@@ -133,6 +133,62 @@ de demostración, generando dos conjuntos de registros.
 
 Evidencia: `docs/pruebas-negocio.md`
 
+
+## Commit 15: pruebas de ranking e integración final
+
+Se completaron las verificaciones finales del sistema.
+
+- 4 pruebas automáticas adicionales de ranking.
+- 10 pruebas Jest aprobadas en total.
+- 14 pruebas de integración C01-C14 aprobadas.
+- Compilación exitosa del backend NestJS.
+- Compilación exitosa del frontend Vue/Vite.
+- Instalación limpia comprobada desde un clon de main.
+- Persistencia de MySQL verificada tras reiniciar la API.
+- Validación de permisos, partidos, resultados y ranking.
+
+Evidencia: `docs/pruebas-integracion.md`
+
+Durante la instalación limpia, npm informó
+20 vulnerabilidades moderadas en las dependencias
+del backend. Estas advertencias no impidieron
+las pruebas, pero requieren revisión posterior.
+```
+
+Guarda también este archivo.
+
+## Paso 4. Revisar los archivos antes del último commit
+
+En PowerShell ejecuta:
+
+```powershell
+git status
+```
+
+Deberían aparecer, como mínimo:
+
+- `README.md` modificado.
+- `docs/pruebas-negocio.md` modificado.
+- `docs/pruebas-integracion.md` nuevo.
+- `backend/src/ranking/calcular-ranking.spec.ts` nuevo.
+
+Después ejecuta:
+
+```powershell
+git add README.md docs/pruebas-negocio.md docs/pruebas-integracion.md backend/src/ranking/calcular-ranking.spec.ts
+git diff --cached --stat
+```
+
+Si actualizaste también `docs/bitacora.md`, puedes incluirlo mediante `git add docs/bitacora.md`.
+
+**Pégame el resultado de `git diff --cached --stat`.** Revisaremos que estén los archivos correctos y ejecutaremos el commit final:
+
+```powershell
+git commit -m "test: ranking integracion y documentacion de entrega"
+```
+
+Después haremos el push, fusionaremos el Pull Request y comprobaremos que `main` contiene la versión definitiva de GameHub.
+
 ## Verificación de MySQL
 
 El archivo `database/verificar.sql` contiene
